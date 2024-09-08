@@ -1,0 +1,86 @@
+<project xmlns="https://maven.apache.org/POM/4.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>JsonPlaceHolder</groupId>
+  <artifactId>JsonPlaceHolder</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <build>
+<plugins>
+ 
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-surefire-plugin</artifactId>
+<version>2.22.0</version>
+<configuration>
+<includes>
+<include>testrunner.java</include>
+</includes>
+<excludes>
+<exclude>**/BaseTest.java</exclude>
+<exclude>**/TestsUtil.java</exclude>
+</excludes>
+</configuration>
+</plugin>
+</plugins>
+ 
+    </build>
+<dependencies>
+<dependency>
+<groupId>junit</groupId>
+<artifactId>junit</artifactId>
+<version>4.13</version>
+<scope>test</scope>
+</dependency>
+<dependency>
+<groupId>io.rest-assured</groupId>
+<artifactId>rest-assured</artifactId>
+<version>4.2.0</version>
+<scope>test</scope>
+</dependency>
+<dependency>
+<groupId>io.cucumber</groupId>
+<artifactId>cucumber-java</artifactId>
+<version>5.2.0</version>
+</dependency>
+<dependency>
+<groupId>io.cucumber</groupId>
+<artifactId>cucumber-jvm-deps</artifactId>
+<version>1.0.6</version>
+<scope>provided</scope>
+</dependency>
+<dependency>
+<groupId>io.cucumber</groupId>
+<artifactId>cucumber-junit</artifactId>
+<version>5.2.0</version>
+<scope>test</scope>
+</dependency>
+<dependency>
+<groupId>org.codehaus.groovy</groupId>
+<artifactId>groovy</artifactId>
+<version>3.0.8</version>
+</dependency>
+<dependency>  
+<groupId>com.googlecode.json-simple</groupId>  
+<artifactId>json-simple</artifactId>  
+<version>1.1</version>  
+</dependency>
+<!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
+<dependency>
+    <groupId>com.relevantcodes</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>2.40.2</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.freemarker/freemarker -->
+<dependency>
+    <groupId>org.freemarker</groupId>
+    <artifactId>freemarker</artifactId>
+    <version>2.3.23</version>
+</dependency><!-- https://mvnrepository.com/artifact/net.masterthought/cucumber-reporting -->
+<dependency>
+    <groupId>net.masterthought</groupId>
+    <artifactId>cucumber-reporting</artifactId>
+    <version>5.8.2</version>
+</dependency>
+
+</dependencies>
+</project>
